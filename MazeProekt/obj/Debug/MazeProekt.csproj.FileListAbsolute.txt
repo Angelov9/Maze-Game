@@ -1,0 +1,10 @@
+D:\Finki\Semestar 4\Vizuelno programiranje\MazeProekt\MazeProekt\bin\Debug\MazeProekt.exe.config
+D:\Finki\Semestar 4\Vizuelno programiranje\MazeProekt\MazeProekt\bin\Debug\MazeProekt.exe
+D:\Finki\Semestar 4\Vizuelno programiranje\MazeProekt\MazeProekt\bin\Debug\MazeProekt.pdb
+D:\Finki\Semestar 4\Vizuelno programiranje\MazeProekt\MazeProekt\obj\Debug\MazeProekt.csprojAssemblyReference.cache
+D:\Finki\Semestar 4\Vizuelno programiranje\MazeProekt\MazeProekt\obj\Debug\MazeProekt.Form1.resources
+D:\Finki\Semestar 4\Vizuelno programiranje\MazeProekt\MazeProekt\obj\Debug\MazeProekt.Properties.Resources.resources
+D:\Finki\Semestar 4\Vizuelno programiranje\MazeProekt\MazeProekt\obj\Debug\MazeProekt.csproj.GenerateResource.cache
+D:\Finki\Semestar 4\Vizuelno programiranje\MazeProekt\MazeProekt\obj\Debug\MazeProekt.csproj.CoreCompileInputs.cache
+D:\Finki\Semestar 4\Vizuelno programiranje\MazeProekt\MazeProekt\obj\Debug\MazeProekt.exe
+D:\Finki\Semestar 4\Vizuelno programiranje\MazeProekt\MazeProekt\obj\Debug\MazeProekt.pdb
