@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace MazeProekt
 {
-    public class Player
+    [Serializable]
+    public class Player: IComparable<Player>
     {
         public Point currentPoint { get; set; }
         public string name { get; set; }
@@ -34,6 +35,27 @@ namespace MazeProekt
         public void move(int v1, int v2)
         {
             currentPoint = new Point(currentPoint.X + v1, currentPoint.Y + v2);
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{0} - {1}:{2:00}", name, time/60, time%60);
+        }
+
+        public int CompareTo(Player p)
+        {
+            if (p == null)
+                return 1;
+            if(p.time > this.time)
+            {
+                return -1;
+            }else if (p.time < this.time)
+            {
+                return 1;
+            }else
+            {
+                return 0;
+            }
         }
     }
 }

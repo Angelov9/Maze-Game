@@ -29,8 +29,6 @@ namespace MazeProekt
 
         public void Draw(Graphics g)
         {
-            // real problem...
-            //m.GenerateGrid(); 
             if (m.gotPath)
             {
                 m.DrawMaze(g);
@@ -40,8 +38,6 @@ namespace MazeProekt
                 m = new Maze2(size, wall);
                 Draw(g);
             }
-
         }
-
     }
 }

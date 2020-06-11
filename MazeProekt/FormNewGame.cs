@@ -10,8 +10,12 @@ using System.Windows.Forms;
 
 namespace MazeProekt
 {
+    [Serializable]
     public partial class FormNewGame : Form
     {
+        public int[] type { get; set; } = new int[3]{
+            0,1,2
+        };
         public FormNewGame()
         {
             InitializeComponent();
@@ -19,7 +23,19 @@ namespace MazeProekt
 
         private void btnStartGame_Click(object sender, EventArgs e)
         {
-            var game = new Form1();
+            var game = new Form1(0, 0, txtName.Text, type[0]);
+            if (newGameRbEasy.Checked)
+            {
+                game = new Form1(0, 0, txtName.Text, type[0]);
+            }
+            else if (newGameRbMedium.Checked)
+            {
+                game = new Form1(0, 0, txtName.Text, type[1]);
+            }
+            else if (newGameRbHard.Checked)
+            {
+                game = new Form1(0, 0, txtName.Text, type[2]);
+            }
             game.Show();
             this.Hide();
         }
@@ -30,9 +46,10 @@ namespace MazeProekt
             cancel = MessageBox.Show("Are you sure?", "Cancel Game", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (cancel == DialogResult.OK)
             {
-                this.Close();
+                this.Hide();
+                var startMenu = new FormStartMenu();
+                startMenu.Show();
             }
-
         }
 
         private void txtName_Validating(object sender, CancelEventArgs e)
@@ -41,13 +58,12 @@ namespace MazeProekt
             {
                 errorProvider1.SetError(txtName, "You must enter a name!");
                 e.Cancel = true;
-
-
             }
-        
-          
+        }
 
-
+        private void FormNewGame_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
