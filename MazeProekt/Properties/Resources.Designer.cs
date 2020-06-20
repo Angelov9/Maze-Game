@@ -63,9 +63,9 @@ namespace MazeProekt.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap avatar2 {
+        internal static System.Drawing.Bitmap avatar {
             get {
-                object obj = ResourceManager.GetObject("avatar2", resourceCulture);
+                object obj = ResourceManager.GetObject("avatar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

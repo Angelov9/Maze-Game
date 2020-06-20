@@ -30,7 +30,7 @@ namespace MazeProekt
             //g.FillEllipse(b, currentPoint.X - 5, currentPoint.Y - 5, radius * 2, radius * 2);
             //b.Dispose();
 
-            Image imageFile = Properties.Resources.avatar2;
+            Image imageFile = Properties.Resources.avatar;
             Graphics newGraphics = Graphics.FromImage(imageFile);
             newGraphics.FillRectangle(new SolidBrush(Color.Black), currentPoint.X - 5, currentPoint.Y - 5, radius * 2, radius * 2);
             g.DrawImage(imageFile, currentPoint.X - 5, currentPoint.Y - 5);
