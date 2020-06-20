@@ -209,7 +209,6 @@ namespace MazeProekt
 
         public bool DFS(int x1, int y1, int x2, int y2)
         {
-
             Cell s = cells[x1, y1];
             Cell e = cells[x2, y2];
 

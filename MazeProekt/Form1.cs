@@ -88,9 +88,8 @@ namespace MazeProekt
                 player = new Player(name, scena.m.start.centerPoint);
                 first = false;
             }
+
             player.Draw(e.Graphics);
-
-
         }
 
         bool finish = false;

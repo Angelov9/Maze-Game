@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MazeProekt
@@ -50,13 +44,10 @@ namespace MazeProekt
                 var startMenu = new FormStartMenu();
                 startMenu.Show();
             }
-           
         }
 
         private void txtName_Validating(object sender, CancelEventArgs e)
         {
-         
-
             if (txtName.Text.Length == 0)
             {
                 errorProvider1.SetError(txtName, "You must enter a name!");
@@ -64,14 +55,10 @@ namespace MazeProekt
             }
             else
             {
-               
-               
                 e.Cancel = false;
                 txtName.Focus();
                 errorProvider1.SetError(txtName, "");
-
             }
-
         }
 
         private void FormNewGame_FormClosing(object sender, FormClosingEventArgs e)

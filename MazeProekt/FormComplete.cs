@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MazeProekt
@@ -26,12 +19,10 @@ namespace MazeProekt
             InitializeComponent();
             if (level == 9)
             {
-                lblLevel.Text=" ";
-    
+                lblLevel.Text = " ";
+
                 lblScore.Text = "Final Score:";
                 btnNext.Text = "Finish";
-                
-                
             }
             else
             {
@@ -64,7 +55,5 @@ namespace MazeProekt
         {
             Application.Exit();
         }
-
-     
     }
 }

@@ -49,9 +49,10 @@
             this.gameLblTime.AutoSize = true;
             this.gameLblTime.Font = new System.Drawing.Font("Stencil", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameLblTime.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.gameLblTime.Location = new System.Drawing.Point(241, 64);
+            this.gameLblTime.Location = new System.Drawing.Point(181, 52);
+            this.gameLblTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gameLblTime.Name = "gameLblTime";
-            this.gameLblTime.Size = new System.Drawing.Size(168, 35);
+            this.gameLblTime.Size = new System.Drawing.Size(134, 29);
             this.gameLblTime.TabIndex = 24;
             this.gameLblTime.Text = "0 Seconds";
             // 
@@ -60,9 +61,10 @@
             this.gameLblLevel.AutoSize = true;
             this.gameLblLevel.Font = new System.Drawing.Font("Stencil", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameLblLevel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.gameLblLevel.Location = new System.Drawing.Point(31, 64);
+            this.gameLblLevel.Location = new System.Drawing.Point(23, 52);
+            this.gameLblLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gameLblLevel.Name = "gameLblLevel";
-            this.gameLblLevel.Size = new System.Drawing.Size(111, 35);
+            this.gameLblLevel.Size = new System.Drawing.Size(89, 29);
             this.gameLblLevel.TabIndex = 23;
             this.gameLblLevel.Text = "Level:";
             // 
@@ -71,9 +73,10 @@
             this.gameLblType.AutoSize = true;
             this.gameLblType.Font = new System.Drawing.Font("Stencil", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameLblType.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.gameLblType.Location = new System.Drawing.Point(12, 32);
+            this.gameLblType.Location = new System.Drawing.Point(9, 26);
+            this.gameLblType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gameLblType.Name = "gameLblType";
-            this.gameLblType.Size = new System.Drawing.Size(130, 35);
+            this.gameLblType.Size = new System.Drawing.Size(107, 29);
             this.gameLblType.TabIndex = 25;
             this.gameLblType.Text = "Medium";
             // 
@@ -82,33 +85,35 @@
             this.lblBackToStartManu.AutoSize = true;
             this.lblBackToStartManu.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblBackToStartManu.Image = ((System.Drawing.Image)(resources.GetObject("lblBackToStartManu.Image")));
-            this.lblBackToStartManu.Location = new System.Drawing.Point(238, 8);
+            this.lblBackToStartManu.Location = new System.Drawing.Point(178, 6);
+            this.lblBackToStartManu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBackToStartManu.Name = "lblBackToStartManu";
-            this.lblBackToStartManu.Size = new System.Drawing.Size(0, 51);
+            this.lblBackToStartManu.Size = new System.Drawing.Size(0, 39);
             this.lblBackToStartManu.TabIndex = 26;
             // 
             // lblBtnBack
             // 
             this.lblBtnBack.Image = ((System.Drawing.Image)(resources.GetObject("lblBtnBack.Image")));
-            this.lblBtnBack.Location = new System.Drawing.Point(305, 32);
+            this.lblBtnBack.Location = new System.Drawing.Point(229, 26);
+            this.lblBtnBack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBtnBack.Name = "lblBtnBack";
-            this.lblBtnBack.Size = new System.Drawing.Size(25, 27);
+            this.lblBtnBack.Size = new System.Drawing.Size(19, 22);
             this.lblBtnBack.TabIndex = 27;
             this.lblBtnBack.Text = "              ";
             this.lblBtnBack.Click += new System.EventHandler(this.lblBtnBack_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1112, 998);
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.ClientSize = new System.Drawing.Size(834, 811);
             this.Controls.Add(this.lblBtnBack);
             this.Controls.Add(this.lblBackToStartManu);
             this.Controls.Add(this.gameLblType);
             this.Controls.Add(this.gameLblTime);
             this.Controls.Add(this.gameLblLevel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maze Game";

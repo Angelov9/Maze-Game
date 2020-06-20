@@ -1,14 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MazeProekt
@@ -62,7 +56,7 @@ namespace MazeProekt
 
         private void btnHighScore_Click(object sender, EventArgs e)
         {
-            var formHighScores = new FormHighScores(topPlayersEasy);
+            var formHighScores = new FormHighScores();
             formHighScores.Show();
             this.Hide();
         }
