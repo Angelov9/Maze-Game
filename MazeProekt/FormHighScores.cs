@@ -39,7 +39,7 @@ namespace MazeProekt
             catch (Exception e)
             {
                 e.ToString();
-                fileName = "Maze";
+                fileName = "Maze2";
             }
 
             Level();

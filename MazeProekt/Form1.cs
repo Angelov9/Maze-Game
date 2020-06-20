@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MazeProekt
@@ -23,6 +16,8 @@ namespace MazeProekt
         public string name { get; set; }
         public int type { get; set; }
         public bool first { get; set; }
+        
+
         public string fileName = "Maze2";
 
         // levels for the game
@@ -38,6 +33,8 @@ namespace MazeProekt
         {
             31, 32, 33, 34, 35, 36, 37, 38, 39, 40
         };
+
+
 
         public Form1(int level, int time, string name, int type)
         {
@@ -61,6 +58,8 @@ namespace MazeProekt
             DoubleBuffered = true;
 
             InitializeComponent();
+           
+
             if (this.type == 0)
             {
                 gameLblType.Text = "Easy";
@@ -77,7 +76,8 @@ namespace MazeProekt
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             gameLblLevel.Text = "Level: " + (level + 1);
-            
+
+
             int w = 75 + (scena.size * 2 * scena.wall) + 75;
             int h = 100 + (scena.size * 2 * scena.wall) + 75;
             this.Width = w;
@@ -89,113 +89,12 @@ namespace MazeProekt
                 first = false;
             }
             player.Draw(e.Graphics);
+
+
         }
 
         bool finish = false;
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            bool touched = false;
-
-            if (e.KeyCode == Keys.Left)
-            {
-                foreach (Wall w in scena.m.leftWalls)
-                {
-                    if (w.DistanceBetweenPointAndLineY(player.currentPoint.X - 5, player.currentPoint.Y) < player.radius && w.typeOfWall[1])
-                    {
-                        touched = true;
-                    }
-                }
-            }
-            else if (e.KeyCode == Keys.Up)
-            {
-                foreach (Wall w in scena.m.topWalls)
-                {
-                    if (w.DistanceBetweenPointAndLineX(player.currentPoint.X, player.currentPoint.Y - 5) < player.radius && w.typeOfWall[0])
-                    {
-                        touched = true;
-                    }
-                }
-            }
-            else if (e.KeyCode == Keys.Right)
-            {
-                foreach (Wall w in scena.m.rightWalls)
-                {
-                    if (w.DistanceBetweenPointAndLineY(player.currentPoint.X + 5, player.currentPoint.Y) < player.radius && w.typeOfWall[3])
-                    {
-                        touched = true;
-                    }
-                }
-            }
-            else if (e.KeyCode == Keys.Down)
-            {
-                foreach (Wall w in scena.m.bottomWalls)
-                {
-                    if (w.DistanceBetweenPointAndLineX(player.currentPoint.X, player.currentPoint.Y + 5) < player.radius && w.typeOfWall[2])
-                    {
-                        touched = true;
-                    }
-                }
-            }
-            
-            if (!touched)
-            {
-                if (e.KeyCode == Keys.Left)
-                {
-                    player.move(-4, 0);
-                }
-                else if (e.KeyCode == Keys.Up)
-                {
-                    player.move(0, -4);
-                }
-                else if (e.KeyCode == Keys.Right)
-                {
-                    player.move(4, 0);
-                }
-                else if (e.KeyCode == Keys.Down)
-                {
-                    player.move(0, 4);
-                }
-            }
-
-            if (DistanceBetweenTwoPoints(player.currentPoint.X, player.currentPoint.Y, scena.m.end.centerPoint.X, scena.m.end.centerPoint.Y) < scena.wall)
-            {
-                finish = true;
-            }
-
-            if (finish)
-            {
-                if (level == 9)
-                {
-                    player.time = this.time;
-                    if (type == 0)
-                    {
-                        FormStartMenu.topPlayersEasy.Add(player);
-                    }
-                    else if (type == 1)
-                    {
-                        FormStartMenu.topPlayersMedium.Add(player);
-                    }
-                    else if (type == 2)
-                    {
-                        FormStartMenu.topPlayersHard.Add(player);
-                    }
-                    using (FileStream fs = new FileStream(fileName, FileMode.Create))
-                    {
-                        IFormatter f = new BinaryFormatter();
-                        f.Serialize(fs, FormStartMenu.topPlayersEasy);
-                        f.Serialize(fs, FormStartMenu.topPlayersMedium);
-                        f.Serialize(fs, FormStartMenu.topPlayersHard);
-                    }
-                }
-
-                var formCompelte = new FormComplete(level, time, name, type);
-                formCompelte.Show();
-                this.Hide();
-            }
-
-            Invalidate();
-        }
 
         public double DistanceBetweenTwoPoints(int x1, int y1, int x2, int y2)
         {
@@ -218,8 +117,124 @@ namespace MazeProekt
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             gameLblLevel.Text = "Level: " + (level + 1);
             gameLblTime.Text = time + " Seconds";
+
+        }
+
+        private void lblBtnBack_Click(object sender, EventArgs e)
+        {
+            var formStartMenu = new FormStartMenu();
+            formStartMenu.Show();
+            this.Hide();
+        }
+
+        private void Form1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+          
+                bool touched = false;
+
+                if (e.KeyCode == Keys.Left)
+                {
+                    foreach (Wall w in scena.m.leftWalls)
+                    {
+                        if (w.DistanceBetweenPointAndLineY(player.currentPoint.X - 5, player.currentPoint.Y) < player.radius && w.typeOfWall[1])
+                        {
+                            touched = true;
+                        }
+                    }
+                }
+                else if (e.KeyCode == Keys.Up)
+                {
+                    foreach (Wall w in scena.m.topWalls)
+                    {
+                        if (w.DistanceBetweenPointAndLineX(player.currentPoint.X, player.currentPoint.Y - 5) < player.radius && w.typeOfWall[0])
+                        {
+                            touched = true;
+                        }
+                    }
+                }
+                else if (e.KeyCode == Keys.Right)
+                {
+                    foreach (Wall w in scena.m.rightWalls)
+                    {
+                        if (w.DistanceBetweenPointAndLineY(player.currentPoint.X + 5, player.currentPoint.Y) < player.radius && w.typeOfWall[3])
+                        {
+                            touched = true;
+                        }
+                    }
+                }
+                else if (e.KeyCode == Keys.Down)
+                {
+                    foreach (Wall w in scena.m.bottomWalls)
+                    {
+                        if (w.DistanceBetweenPointAndLineX(player.currentPoint.X, player.currentPoint.Y + 5) < player.radius && w.typeOfWall[2])
+                        {
+                            touched = true;
+                        }
+                    }
+                }
+
+                if (!touched)
+                {
+                if (e.KeyCode == Keys.Left)
+                  {
+                      player.move(-4, 0);
+                  }
+                  else if (e.KeyCode == Keys.Up)
+                  {
+                      player.move(0, -4);
+                  }
+                  else if (e.KeyCode == Keys.Right)
+                  {
+                      player.move(4, 0);
+                  }
+                  else if (e.KeyCode == Keys.Down)
+                  {
+                      player.move(0, 4);
+                  }
+            }
+
+            if (DistanceBetweenTwoPoints(player.currentPoint.X, player.currentPoint.Y, scena.m.end.centerPoint.X, scena.m.end.centerPoint.Y) < scena.wall)
+                {
+                    finish = true;
+                }
+
+                if (finish)
+                {
+                    if (level == 9)
+                    {
+                        player.time = this.time;
+                        if (type == 0)
+                        {
+                            FormStartMenu.topPlayersEasy.Add(player);
+                        }
+                        else if (type == 1)
+                        {
+                            FormStartMenu.topPlayersMedium.Add(player);
+                        }
+                        else if (type == 2)
+                        {
+                            FormStartMenu.topPlayersHard.Add(player);
+                        }
+                        using (FileStream fs = new FileStream(fileName, FileMode.Create))
+                        {
+                            IFormatter f = new BinaryFormatter();
+                            f.Serialize(fs, FormStartMenu.topPlayersEasy);
+                            f.Serialize(fs, FormStartMenu.topPlayersMedium);
+                            f.Serialize(fs, FormStartMenu.topPlayersHard);
+                        }
+                    }
+
+                    var formCompelte = new FormComplete(level, time, name, type);
+                    formCompelte.Show();
+                    this.Hide();
+                }
+
+                Invalidate();
+            }
         }
     }
-}
+    
+    

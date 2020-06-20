@@ -36,3 +36,17 @@ D:\Finki\Semestar 4\Vizuelno programiranje\Maze-Game\MazeProekt\obj\Debug\MazePr
 D:\Finki\Semestar 4\Vizuelno programiranje\Maze-Game\MazeProekt\obj\Debug\MazeProekt.csproj.CoreCompileInputs.cache
 D:\Finki\Semestar 4\Vizuelno programiranje\Maze-Game\MazeProekt\obj\Debug\MazeProekt.exe
 D:\Finki\Semestar 4\Vizuelno programiranje\Maze-Game\MazeProekt\obj\Debug\MazeProekt.pdb
+D:\6-ti Semestar\VP\MazeProekt\Maze-Game\MazeProekt\bin\Debug\MazeProekt.exe.config
+D:\6-ti Semestar\VP\MazeProekt\Maze-Game\MazeProekt\bin\Debug\MazeProekt.exe
+D:\6-ti Semestar\VP\MazeProekt\Maze-Game\MazeProekt\bin\Debug\MazeProekt.pdb
+D:\6-ti Semestar\VP\MazeProekt\Maze-Game\MazeProekt\obj\Debug\MazeProekt.csprojAssemblyReference.cache
+D:\6-ti Semestar\VP\MazeProekt\Maze-Game\MazeProekt\obj\Debug\MazeProekt.Form1.resources
+D:\6-ti Semestar\VP\MazeProekt\Maze-Game\MazeProekt\obj\Debug\MazeProekt.FormComplete.resources
+D:\6-ti Semestar\VP\MazeProekt\Maze-Game\MazeProekt\obj\Debug\MazeProekt.FormStartMenu.resources
+D:\6-ti Semestar\VP\MazeProekt\Maze-Game\MazeProekt\obj\Debug\MazeProekt.FormHighScores.resources
+D:\6-ti Semestar\VP\MazeProekt\Maze-Game\MazeProekt\obj\Debug\MazeProekt.FormNewGame.resources
+D:\6-ti Semestar\VP\MazeProekt\Maze-Game\MazeProekt\obj\Debug\MazeProekt.Properties.Resources.resources
+D:\6-ti Semestar\VP\MazeProekt\Maze-Game\MazeProekt\obj\Debug\MazeProekt.csproj.GenerateResource.cache
+D:\6-ti Semestar\VP\MazeProekt\Maze-Game\MazeProekt\obj\Debug\MazeProekt.csproj.CoreCompileInputs.cache
+D:\6-ti Semestar\VP\MazeProekt\Maze-Game\MazeProekt\obj\Debug\MazeProekt.exe
+D:\6-ti Semestar\VP\MazeProekt\Maze-Game\MazeProekt\obj\Debug\MazeProekt.pdb

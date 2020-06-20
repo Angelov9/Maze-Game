@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHighScores));
             this.lblHighScores = new System.Windows.Forms.Label();
             this.lbHighScores = new System.Windows.Forms.ListBox();
             this.btnReturnToMenu = new System.Windows.Forms.Button();
@@ -42,10 +43,9 @@
             this.lblHighScores.BackColor = System.Drawing.SystemColors.Control;
             this.lblHighScores.Font = new System.Drawing.Font("Stencil", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHighScores.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblHighScores.Location = new System.Drawing.Point(2, 35);
-            this.lblHighScores.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHighScores.Location = new System.Drawing.Point(3, 43);
             this.lblHighScores.Name = "lblHighScores";
-            this.lblHighScores.Size = new System.Drawing.Size(686, 114);
+            this.lblHighScores.Size = new System.Drawing.Size(858, 142);
             this.lblHighScores.TabIndex = 0;
             this.lblHighScores.Text = "High  Scores";
             // 
@@ -55,13 +55,13 @@
             this.lbHighScores.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHighScores.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lbHighScores.FormattingEnabled = true;
-            this.lbHighScores.ItemHeight = 37;
+            this.lbHighScores.ItemHeight = 46;
             this.lbHighScores.Items.AddRange(new object[] {
             ""});
-            this.lbHighScores.Location = new System.Drawing.Point(119, 199);
-            this.lbHighScores.Margin = new System.Windows.Forms.Padding(2);
+            this.lbHighScores.Location = new System.Drawing.Point(159, 245);
+            this.lbHighScores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbHighScores.Name = "lbHighScores";
-            this.lbHighScores.Size = new System.Drawing.Size(431, 189);
+            this.lbHighScores.Size = new System.Drawing.Size(573, 188);
             this.lbHighScores.TabIndex = 1;
             // 
             // btnReturnToMenu
@@ -69,10 +69,10 @@
             this.btnReturnToMenu.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnReturnToMenu.Font = new System.Drawing.Font("Stencil", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturnToMenu.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnReturnToMenu.Location = new System.Drawing.Point(119, 413);
-            this.btnReturnToMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReturnToMenu.Location = new System.Drawing.Point(159, 508);
+            this.btnReturnToMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReturnToMenu.Name = "btnReturnToMenu";
-            this.btnReturnToMenu.Size = new System.Drawing.Size(430, 58);
+            this.btnReturnToMenu.Size = new System.Drawing.Size(573, 71);
             this.btnReturnToMenu.TabIndex = 3;
             this.btnReturnToMenu.Text = "Return to Menu";
             this.btnReturnToMenu.UseVisualStyleBackColor = false;
@@ -83,9 +83,10 @@
             this.highScoreRbHard.AutoSize = true;
             this.highScoreRbHard.Font = new System.Drawing.Font("Stencil", 13.8F, System.Drawing.FontStyle.Bold);
             this.highScoreRbHard.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.highScoreRbHard.Location = new System.Drawing.Point(400, 152);
+            this.highScoreRbHard.Location = new System.Drawing.Point(533, 187);
+            this.highScoreRbHard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.highScoreRbHard.Name = "highScoreRbHard";
-            this.highScoreRbHard.Size = new System.Drawing.Size(83, 26);
+            this.highScoreRbHard.Size = new System.Drawing.Size(104, 33);
             this.highScoreRbHard.TabIndex = 31;
             this.highScoreRbHard.Text = "Hard";
             this.highScoreRbHard.UseVisualStyleBackColor = true;
@@ -96,9 +97,10 @@
             this.highScoreRbMedium.AutoSize = true;
             this.highScoreRbMedium.Font = new System.Drawing.Font("Stencil", 13.8F, System.Drawing.FontStyle.Bold);
             this.highScoreRbMedium.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.highScoreRbMedium.Location = new System.Drawing.Point(279, 152);
+            this.highScoreRbMedium.Location = new System.Drawing.Point(372, 187);
+            this.highScoreRbMedium.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.highScoreRbMedium.Name = "highScoreRbMedium";
-            this.highScoreRbMedium.Size = new System.Drawing.Size(108, 26);
+            this.highScoreRbMedium.Size = new System.Drawing.Size(134, 33);
             this.highScoreRbMedium.TabIndex = 30;
             this.highScoreRbMedium.Text = "Medium";
             this.highScoreRbMedium.UseVisualStyleBackColor = true;
@@ -110,9 +112,10 @@
             this.highScoreRbEasy.Checked = true;
             this.highScoreRbEasy.Font = new System.Drawing.Font("Stencil", 13.8F, System.Drawing.FontStyle.Bold);
             this.highScoreRbEasy.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.highScoreRbEasy.Location = new System.Drawing.Point(187, 152);
+            this.highScoreRbEasy.Location = new System.Drawing.Point(249, 187);
+            this.highScoreRbEasy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.highScoreRbEasy.Name = "highScoreRbEasy";
-            this.highScoreRbEasy.Size = new System.Drawing.Size(77, 26);
+            this.highScoreRbEasy.Size = new System.Drawing.Size(94, 33);
             this.highScoreRbEasy.TabIndex = 29;
             this.highScoreRbEasy.TabStop = true;
             this.highScoreRbEasy.Text = "Easy";
@@ -121,19 +124,20 @@
             // 
             // FormHighScores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 501);
+            this.ClientSize = new System.Drawing.Size(912, 617);
             this.Controls.Add(this.highScoreRbHard);
             this.Controls.Add(this.highScoreRbMedium);
             this.Controls.Add(this.highScoreRbEasy);
             this.Controls.Add(this.btnReturnToMenu);
             this.Controls.Add(this.lbHighScores);
             this.Controls.Add(this.lblHighScores);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormHighScores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "High Scores";
+            this.Text = "Maze Game";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormHighScores_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

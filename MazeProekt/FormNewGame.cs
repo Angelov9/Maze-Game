@@ -50,15 +50,28 @@ namespace MazeProekt
                 var startMenu = new FormStartMenu();
                 startMenu.Show();
             }
+           
         }
 
         private void txtName_Validating(object sender, CancelEventArgs e)
         {
+         
+
             if (txtName.Text.Length == 0)
             {
                 errorProvider1.SetError(txtName, "You must enter a name!");
                 e.Cancel = true;
             }
+            else
+            {
+               
+               
+                e.Cancel = false;
+                txtName.Focus();
+                errorProvider1.SetError(txtName, "");
+
+            }
+
         }
 
         private void FormNewGame_FormClosing(object sender, FormClosingEventArgs e)

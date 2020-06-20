@@ -26,7 +26,12 @@ namespace MazeProekt
             InitializeComponent();
             if (level == 9)
             {
+                lblLevel.Text=" ";
+    
+                lblScore.Text = "Final Score:";
                 btnNext.Text = "Finish";
+                
+                
             }
             else
             {
@@ -59,5 +64,7 @@ namespace MazeProekt
         {
             Application.Exit();
         }
+
+     
     }
 }
