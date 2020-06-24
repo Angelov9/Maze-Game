@@ -20,9 +20,9 @@ namespace MazeProekt
             if (level == 9)
             {
                 lblLevel.Text = " ";
-
-                lblScore.Text = "Final Score:";
+                lblScore.Text = "  Final Time:";
                 btnNext.Text = "Finish";
+                btnCancel.Hide();
             }
             else
             {
@@ -54,6 +54,18 @@ namespace MazeProekt
         private void FormComplete_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult cancel = new DialogResult();
+            cancel = MessageBox.Show("Are you sure?", "Cancel Game", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (cancel == DialogResult.OK)
+            {
+                this.Hide();
+                var startMenu = new FormStartMenu();
+                startMenu.Show();
+            }
         }
     }
 }

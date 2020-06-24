@@ -129,7 +129,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\avatar.png" />
-    <Content Include="Resources\avatar2.png" />
     <Content Include="Resources\mazeIcon.ico" />
     <None Include="Resources\home.png" />
   </ItemGroup>
